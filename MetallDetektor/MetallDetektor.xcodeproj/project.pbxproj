@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		819472051BAD7FC000367B67 /* SolutionLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819472041BAD7FC000367B67 /* SolutionLogger.swift */; settings = {ASSET_TAGS = (); }; };
 		F95BE3C41BAD7D79002C4927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95BE3C31BAD7D79002C4927 /* AppDelegate.swift */; };
 		F95BE3C61BAD7D79002C4927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95BE3C51BAD7D79002C4927 /* ViewController.swift */; };
 		F95BE3C91BAD7D79002C4927 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95BE3C71BAD7D79002C4927 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		819472041BAD7FC000367B67 /* SolutionLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionLogger.swift; sourceTree = "<group>"; };
 		F95BE3C01BAD7D79002C4927 /* MetallDetektor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetallDetektor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95BE3C31BAD7D79002C4927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F95BE3C51BAD7D79002C4927 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				F95BE3C51BAD7D79002C4927 /* ViewController.swift */,
 				F95BE3C71BAD7D79002C4927 /* Main.storyboard */,
 				F95BE3CA1BAD7D79002C4927 /* Assets.xcassets */,
+				819472041BAD7FC000367B67 /* SolutionLogger.swift */,
 				F95BE3CC1BAD7D79002C4927 /* LaunchScreen.storyboard */,
 				F95BE3CF1BAD7D79002C4927 /* Info.plist */,
 			);
@@ -95,6 +98,7 @@
 				TargetAttributes = {
 					F95BE3BF1BAD7D79002C4927 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = HP69ADE7VM;
 					};
 				};
 			};
@@ -135,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F95BE3C61BAD7D79002C4927 /* ViewController.swift in Sources */,
+				819472051BAD7FC000367B67 /* SolutionLogger.swift in Sources */,
 				F95BE3C41BAD7D79002C4927 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,10 +251,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MetallDetektor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.hsr.appquest.MetallDetektor;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.MetallDetektor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -257,10 +265,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MetallDetektor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.hsr.appquest.MetallDetektor;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.MetallDetektor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -283,6 +294,7 @@
 				F95BE3D41BAD7D79002C4927 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
