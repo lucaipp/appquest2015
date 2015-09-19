@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		812190A41BADA541004EE9BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812190A31BADA541004EE9BF /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		819472051BAD7FC000367B67 /* SolutionLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819472041BAD7FC000367B67 /* SolutionLogger.swift */; settings = {ASSET_TAGS = (); }; };
-		F95BE3C41BAD7D79002C4927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95BE3C31BAD7D79002C4927 /* AppDelegate.swift */; };
-		F95BE3C61BAD7D79002C4927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95BE3C51BAD7D79002C4927 /* ViewController.swift */; };
-		F95BE3C91BAD7D79002C4927 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95BE3C71BAD7D79002C4927 /* Main.storyboard */; };
-		F95BE3CE1BAD7D79002C4927 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95BE3CC1BAD7D79002C4927 /* LaunchScreen.storyboard */; };
+		812190921BADA048004EE9BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812190911BADA048004EE9BF /* AppDelegate.swift */; };
+		812190941BADA048004EE9BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812190931BADA048004EE9BF /* ViewController.swift */; };
+		812190971BADA048004EE9BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812190951BADA048004EE9BF /* Main.storyboard */; };
+		812190991BADA048004EE9BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812190981BADA048004EE9BF /* Assets.xcassets */; };
+		8121909C1BADA048004EE9BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8121909A1BADA048004EE9BF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		812190A31BADA541004EE9BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
-		819472041BAD7FC000367B67 /* SolutionLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionLogger.swift; sourceTree = "<group>"; };
-		F95BE3C01BAD7D79002C4927 /* MetallDetektor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetallDetektor.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F95BE3C31BAD7D79002C4927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F95BE3C51BAD7D79002C4927 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F95BE3C81BAD7D79002C4927 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F95BE3CD1BAD7D79002C4927 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F95BE3CF1BAD7D79002C4927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8121908E1BADA048004EE9BF /* SizeMesurement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SizeMesurement.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		812190911BADA048004EE9BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		812190931BADA048004EE9BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		812190961BADA048004EE9BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		812190981BADA048004EE9BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8121909B1BADA048004EE9BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8121909D1BADA048004EE9BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F95BE3BD1BAD7D79002C4927 /* Frameworks */ = {
+		8121908B1BADA048004EE9BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F95BE3B71BAD7D79002C4927 = {
+		812190851BADA048004EE9BF = {
 			isa = PBXGroup;
 			children = (
-				F95BE3C21BAD7D79002C4927 /* MetallDetektor */,
-				F95BE3C11BAD7D79002C4927 /* Products */,
+				812190901BADA048004EE9BF /* SizeMesurement */,
+				8121908F1BADA048004EE9BF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F95BE3C11BAD7D79002C4927 /* Products */ = {
+		8121908F1BADA048004EE9BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F95BE3C01BAD7D79002C4927 /* MetallDetektor.app */,
+				8121908E1BADA048004EE9BF /* SizeMesurement.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F95BE3C21BAD7D79002C4927 /* MetallDetektor */ = {
+		812190901BADA048004EE9BF /* SizeMesurement */ = {
 			isa = PBXGroup;
 			children = (
-				F95BE3C31BAD7D79002C4927 /* AppDelegate.swift */,
-				F95BE3C51BAD7D79002C4927 /* ViewController.swift */,
-				F95BE3C71BAD7D79002C4927 /* Main.storyboard */,
-				812190A31BADA541004EE9BF /* Assets.xcassets */,
-				819472041BAD7FC000367B67 /* SolutionLogger.swift */,
-				F95BE3CC1BAD7D79002C4927 /* LaunchScreen.storyboard */,
-				F95BE3CF1BAD7D79002C4927 /* Info.plist */,
+				812190911BADA048004EE9BF /* AppDelegate.swift */,
+				812190931BADA048004EE9BF /* ViewController.swift */,
+				812190951BADA048004EE9BF /* Main.storyboard */,
+				812190981BADA048004EE9BF /* Assets.xcassets */,
+				8121909A1BADA048004EE9BF /* LaunchScreen.storyboard */,
+				8121909D1BADA048004EE9BF /* Info.plist */,
 			);
-			path = MetallDetektor;
+			path = SizeMesurement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F95BE3BF1BAD7D79002C4927 /* MetallDetektor */ = {
+		8121908D1BADA048004EE9BF /* SizeMesurement */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F95BE3D21BAD7D79002C4927 /* Build configuration list for PBXNativeTarget "MetallDetektor" */;
+			buildConfigurationList = 812190A01BADA048004EE9BF /* Build configuration list for PBXNativeTarget "SizeMesurement" */;
 			buildPhases = (
-				F95BE3BC1BAD7D79002C4927 /* Sources */,
-				F95BE3BD1BAD7D79002C4927 /* Frameworks */,
-				F95BE3BE1BAD7D79002C4927 /* Resources */,
+				8121908A1BADA048004EE9BF /* Sources */,
+				8121908B1BADA048004EE9BF /* Frameworks */,
+				8121908C1BADA048004EE9BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MetallDetektor;
-			productName = MetallDetektor;
-			productReference = F95BE3C01BAD7D79002C4927 /* MetallDetektor.app */;
+			name = SizeMesurement;
+			productName = SizeMesurement;
+			productReference = 8121908E1BADA048004EE9BF /* SizeMesurement.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F95BE3B81BAD7D79002C4927 /* Project object */ = {
+		812190861BADA048004EE9BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Team BZT";
 				TargetAttributes = {
-					F95BE3BF1BAD7D79002C4927 = {
+					8121908D1BADA048004EE9BF = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = HP69ADE7VM;
 					};
 				};
 			};
-			buildConfigurationList = F95BE3BB1BAD7D79002C4927 /* Build configuration list for PBXProject "MetallDetektor" */;
+			buildConfigurationList = 812190891BADA048004EE9BF /* Build configuration list for PBXProject "SizeMesurement" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -110,55 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = F95BE3B71BAD7D79002C4927;
-			productRefGroup = F95BE3C11BAD7D79002C4927 /* Products */;
+			mainGroup = 812190851BADA048004EE9BF;
+			productRefGroup = 8121908F1BADA048004EE9BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F95BE3BF1BAD7D79002C4927 /* MetallDetektor */,
+				8121908D1BADA048004EE9BF /* SizeMesurement */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F95BE3BE1BAD7D79002C4927 /* Resources */ = {
+		8121908C1BADA048004EE9BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F95BE3CE1BAD7D79002C4927 /* LaunchScreen.storyboard in Resources */,
-				812190A41BADA541004EE9BF /* Assets.xcassets in Resources */,
-				F95BE3C91BAD7D79002C4927 /* Main.storyboard in Resources */,
+				8121909C1BADA048004EE9BF /* LaunchScreen.storyboard in Resources */,
+				812190991BADA048004EE9BF /* Assets.xcassets in Resources */,
+				812190971BADA048004EE9BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F95BE3BC1BAD7D79002C4927 /* Sources */ = {
+		8121908A1BADA048004EE9BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F95BE3C61BAD7D79002C4927 /* ViewController.swift in Sources */,
-				819472051BAD7FC000367B67 /* SolutionLogger.swift in Sources */,
-				F95BE3C41BAD7D79002C4927 /* AppDelegate.swift in Sources */,
+				812190941BADA048004EE9BF /* ViewController.swift in Sources */,
+				812190921BADA048004EE9BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F95BE3C71BAD7D79002C4927 /* Main.storyboard */ = {
+		812190951BADA048004EE9BF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F95BE3C81BAD7D79002C4927 /* Base */,
+				812190961BADA048004EE9BF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F95BE3CC1BAD7D79002C4927 /* LaunchScreen.storyboard */ = {
+		8121909A1BADA048004EE9BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F95BE3CD1BAD7D79002C4927 /* Base */,
+				8121909B1BADA048004EE9BF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F95BE3D01BAD7D79002C4927 /* Debug */ = {
+		8121909E1BADA048004EE9BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -210,7 +206,7 @@
 			};
 			name = Debug;
 		};
-		F95BE3D11BAD7D79002C4927 /* Release */ = {
+		8121909F1BADA048004EE9BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -247,56 +243,51 @@
 			};
 			name = Release;
 		};
-		F95BE3D31BAD7D79002C4927 /* Debug */ = {
+		812190A11BADA048004EE9BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = MetallDetektor/Info.plist;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				INFOPLIST_FILE = SizeMesurement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.MetallDetektor;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.SizeMesurement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
-		F95BE3D41BAD7D79002C4927 /* Release */ = {
+		812190A21BADA048004EE9BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = MetallDetektor/Info.plist;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				INFOPLIST_FILE = SizeMesurement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.MetallDetektor;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.SizeMesurement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F95BE3BB1BAD7D79002C4927 /* Build configuration list for PBXProject "MetallDetektor" */ = {
+		812190891BADA048004EE9BF /* Build configuration list for PBXProject "SizeMesurement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F95BE3D01BAD7D79002C4927 /* Debug */,
-				F95BE3D11BAD7D79002C4927 /* Release */,
+				8121909E1BADA048004EE9BF /* Debug */,
+				8121909F1BADA048004EE9BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F95BE3D21BAD7D79002C4927 /* Build configuration list for PBXNativeTarget "MetallDetektor" */ = {
+		812190A01BADA048004EE9BF /* Build configuration list for PBXNativeTarget "SizeMesurement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F95BE3D31BAD7D79002C4927 /* Debug */,
-				F95BE3D41BAD7D79002C4927 /* Release */,
+				812190A11BADA048004EE9BF /* Debug */,
+				812190A21BADA048004EE9BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F95BE3B81BAD7D79002C4927 /* Project object */;
+	rootObject = 812190861BADA048004EE9BF /* Project object */;
 }
