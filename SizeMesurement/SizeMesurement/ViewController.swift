@@ -26,11 +26,37 @@ class ViewController: UIViewController {
     
     func enableGuiElements(enabled: Bool) {
         txtHeight.enabled = enabled
-        btnTakeMesurement.enabled = enabled
+        txtHeight.text = ""
+        btnTakeMesurement.enabled = !enabled
+        btnLog.enabled = false
     }
     
     @IBAction func changeGuiState(sender: AnyObject) {
         enableGuiElements(swMode.on)
+    }
+    
+    @IBAction func textEdited(sender: AnyObject) {
+        if(txtHeight.text!.isEmpty) {
+            btnLog.enabled = false
+        }
+        else {
+            btnLog.enabled = true
+        }
+    }
+    
+    @IBAction func mesurementStarted(sender: AnyObject) {
+        txtHeight.text = String(3.0)
+        btnLog.enabled = true
+    }
+    
+    @IBAction func logResult(sender: AnyObject) {
+        var json = [String:String]()
+        json["task"] = "Grössenmesser"
+        json["height"] = txtHeight.text
+        
+        let solutionLogger = SolutionLogger(viewController: self)
+        let solutionStr = solutionLogger.JSONStringify(json)
+        solutionLogger.logSolution(solutionStr)
     }
 }
 
