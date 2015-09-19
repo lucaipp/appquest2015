@@ -1,7 +1,0 @@
-platform :ios, '9.0'
-
-inhibit_all_warnings!
-
-pod 'MagicalRecord', '~> 2.3'
-pod 'AFNetworking', '~> 2.6'
-pod 'MBProgressHUD', '~> 0.9'
