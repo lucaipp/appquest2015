@@ -85,6 +85,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I2A-jP-jy4">
                                                 <rect key="frame" x="199" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="changeGuiState:" destination="BYZ-38-t0r" eventType="valueChanged" id="Tab-he-enu"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -126,6 +129,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnLog" destination="AHw-e7-zH8" id="EcL-aC-BkA"/>
+                        <outlet property="btnTakeMesurement" destination="DOx-8Z-SE0" id="yao-RP-0fN"/>
+                        <outlet property="swMode" destination="I2A-jP-jy4" id="2xJ-g0-UgC"/>
+                        <outlet property="txtDistance" destination="O4a-5y-OZy" id="50R-Y5-FxX"/>
+                        <outlet property="txtHeight" destination="ICG-Hw-shg" id="she-24-Qvr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
