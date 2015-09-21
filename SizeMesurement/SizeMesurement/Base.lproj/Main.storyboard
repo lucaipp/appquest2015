@@ -54,7 +54,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O4a-5y-OZy">
                                                 <rect key="frame" x="123" y="0.0" width="126" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
                                                     <action selector="distanceEdited:" destination="BYZ-38-t0r" eventType="editingChanged" id="F7D-w1-9M6"/>
                                                 </connections>
@@ -73,7 +73,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ICG-Hw-shg">
                                                 <rect key="frame" x="123" y="0.0" width="125" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
                                                     <action selector="textEdited:" destination="BYZ-38-t0r" eventType="editingChanged" id="rml-n1-Yqm"/>
                                                 </connections>
@@ -128,7 +128,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GD3-8k-G0R">
                                                 <rect key="frame" x="124" y="0.0" width="124" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
                                                     <action selector="angleEdited:" destination="BYZ-38-t0r" eventType="editingChanged" id="cof-iv-Mti"/>
                                                 </connections>
@@ -147,7 +147,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOb-TY-fkr">
                                                 <rect key="frame" x="124" y="0.0" width="124" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
                                                     <action selector="angleEdited:" destination="BYZ-38-t0r" eventType="editingChanged" id="QY3-uB-10Z"/>
                                                 </connections>
