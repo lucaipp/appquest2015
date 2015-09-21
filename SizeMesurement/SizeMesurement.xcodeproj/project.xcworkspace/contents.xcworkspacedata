@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SizeMesurement.xcodeproj">
+      location = "self:/Users/Luca/Documents/Vorlagen/Groessenmesser/SizeMesurement.xcodeproj">
    </FileRef>
 </Workspace>
