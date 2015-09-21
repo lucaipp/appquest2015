@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class EvaluationViewController: UIViewController, UITextFieldDelegate {
     //Outlets, Konstanten und Variablen
     @IBOutlet weak var txtDistance: UITextField!
     @IBOutlet weak var txtHeight: UITextField!
@@ -12,14 +12,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var svAlpha: UIStackView!
     @IBOutlet weak var svBeta: UIStackView!
     
+    var alphaAngle: Double!
+    var betaAngle: Double!
+    var distance: Double!
+    
     //Funktionen
     override func viewDidLoad() {
         super.viewDidLoad()
         
         swMode.setOn(false, animated: false)
-        txtDistance.delegate = self
         
         enableGuiElements(false)
+        txtDistance.delegate = self
+        
+        if(alphaAngle != nil && betaAngle != nil ) {
+            txtDistance.text = String(distance)
+            txtAlpha.text = String(alphaAngle)
+            txtBeta.text = String(betaAngle)
+            checkAngles()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,10 +50,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func checkAngles() {
         if(!txtAlpha.text!.isEmpty && !txtBeta.text!.isEmpty && !txtDistance.text!.isEmpty) {
-            btnTakeMesurement.enabled = true
+            txtHeight.text = "3.30"
+            btnLog.enabled = true
         }
         else {
-            btnTakeMesurement.enabled = false
+            txtHeight.text = ""
+            btnLog.enabled = false
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showCameraView" {
+            let vc = segue.destinationViewController as! MeasureViewController
+            vc.alphaAngle = Double(txtAlpha.text!)
+            vc.betaAngle = Double(txtBeta.text!)
+            vc.distance = distance
         }
     }
     
@@ -51,32 +73,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         enableGuiElements(swMode.on)
     }
     
-    @IBAction func textEdited(sender: AnyObject) {
-        if(!txtHeight.text!.isEmpty && !txtHeight.text!.isEmpty) {
-            btnLog.enabled = true
-        }
-        else {
-            btnLog.enabled = false
-        }
-    }
-    
-    @IBAction func mesurementStarted(sender: AnyObject) {
-        //Aufgrund von swMode entscheiden, ob Winkel noch gemessen werden müssen
-        
-        //Berechnung vornehmen
-        
-        txtHeight.text = String(3.0)
-        btnLog.enabled = true
-    }
-    
     @IBAction func logResult(sender: AnyObject) {
         var json = [String:String]()
-        json["task"] = "Grössenmesser"
-        json["height"] = txtHeight.text
+        json["task"] = "Groessenmesser"
         
         let solutionLogger = SolutionLogger(viewController: self)
-        let solutionStr = solutionLogger.JSONStringify(json)
-        solutionLogger.logSolution(solutionStr)
+        solutionLogger.scanQRCode { code in
+            json["object"] = code
+            json["height"] = self.txtHeight.text
+            let solutionStr = solutionLogger.JSONStringify(json)
+            solutionLogger.logSolution(solutionStr)
+        }
     }
     
     @IBAction func angleEdited(sender: AnyObject) {
@@ -84,17 +91,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func distanceEdited(sender: AnyObject) {
+        distance = Double(txtDistance.text!)
         if(!svAlpha.hidden && !svBeta.hidden) {
             checkAngles()
             if(txtDistance.text!.isEmpty) {
+                txtHeight.text = ""
                 btnLog.enabled = false
             }
             return
         }
         btnTakeMesurement.enabled = !txtDistance.text!.isEmpty
         if(txtDistance.text!.isEmpty) {
+            txtHeight.text = ""
             btnLog.enabled = false
         }
     }
+    
+    @IBAction func showCameraView(sender: AnyObject) {
+        performSegueWithIdentifier("showCameraView", sender: self)
+    }
 }
-
