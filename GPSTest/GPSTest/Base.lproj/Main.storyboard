@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GPSTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS-Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZZ-0a-ODq">
+                                <rect key="frame" x="262" y="75" width="76.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longtitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USJ-M1-OzR">
+                                <rect key="frame" x="259.5" y="169" width="82.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently no data available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDk-8y-Yx1">
+                                <rect key="frame" x="198" y="122" width="203.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKD-cP-dga">
+                                <rect key="frame" x="268" y="218" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0ZZ-0a-ODq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="1iy-g3-Hck"/>
+                            <constraint firstItem="cDk-8y-Yx1" firstAttribute="top" secondItem="0ZZ-0a-ODq" secondAttribute="bottom" constant="26.5" id="GPy-On-U54"/>
+                            <constraint firstItem="cDk-8y-Yx1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NCF-dg-5IS"/>
+                            <constraint firstItem="USJ-M1-OzR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PY9-Oy-ZN9"/>
+                            <constraint firstItem="0ZZ-0a-ODq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RxY-EZ-tbE"/>
+                            <constraint firstItem="USJ-M1-OzR" firstAttribute="top" secondItem="cDk-8y-Yx1" secondAttribute="bottom" constant="27" id="Smz-hl-ojc"/>
+                            <constraint firstItem="USJ-M1-OzR" firstAttribute="top" secondItem="cDk-8y-Yx1" secondAttribute="bottom" constant="26.5" id="aBg-zn-Eco"/>
+                            <constraint firstItem="USJ-M1-OzR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aQB-rK-nEN"/>
+                            <constraint firstItem="GKD-cP-dga" firstAttribute="top" secondItem="USJ-M1-OzR" secondAttribute="bottom" constant="28.5" id="dT3-Rd-Z8w"/>
+                            <constraint firstItem="GKD-cP-dga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="glu-AB-6RG"/>
+                            <constraint firstItem="USJ-M1-OzR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="169.5" id="jf6-0h-DSD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PY9-Oy-ZN9"/>
+                                <exclude reference="Smz-hl-ojc"/>
+                                <exclude reference="jf6-0h-DSD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="lblGpsLat" destination="GKD-cP-dga" id="Roi-8l-PHx"/>
+                        <outlet property="lblGpsLong" destination="USJ-M1-OzR" id="40b-E8-Yj9"/>
+                        <outlet property="lblGpsState" destination="cDk-8y-Yx1" id="wxu-0L-WQZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="474"/>
+        </scene>
+    </scenes>
+</document>

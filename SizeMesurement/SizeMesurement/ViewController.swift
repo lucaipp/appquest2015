@@ -19,13 +19,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         swMode.setOn(false, animated: false)
         txtDistance.delegate = self
         
-        txtDistance.keyboardType = .NumberPad
-        txtAlpha.delegate = self
-        txtAlpha.keyboardType = .NumberPad
-        txtBeta.delegate = self
-        txtBeta.keyboardType = .NumberPad
-        
         enableGuiElements(false)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     func enableGuiElements(enabled: Bool) {
