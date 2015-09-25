@@ -24,13 +24,6 @@ class MeasureViewController: UIViewController {
             self.currentAngle = self.radiansToDegrees(attitude.pitch)
             }
         }
-        
-        // Hier kommt der MotionManager Code rein, mit dem die Winkel
-        // gemessen werden können. Den aktuellen Winkel könnt ihr in der 
-        // Variable currentAngle zwischenspeichern. Achtung: Die Winkel sind jeweils im
-        // Bogenmass und müssen zuerst noch in Grad umgerechnet werden.
-        // Eventuell, wollt ihr im GUI noch ein Label auf die Kamera-View
-        // setzen, damit ihr darin den aktuell gemessenen Winkel (currentAngle) anzeigen könnt.
     }
     
     private func radiansToDegrees(radians: Double) -> Double {
@@ -51,11 +44,14 @@ class MeasureViewController: UIViewController {
     
     @IBAction func saveAngle(sender: AnyObject) {
         if(txtAlpha.text!.isEmpty) {
-            txtAlpha.text = String(self.currentAngle)
+            alphaAngle = currentAngle
+            txtAlpha.text = String(alphaAngle)
             return
         }
         if(txtBeta.text!.isEmpty) {
-            alphaAngle = currentAngle
+            print(90.0 + (90.0 - currentAngle))
+            betaAngle = (90.0 + (90.0 - currentAngle) - alphaAngle)
+            txtBeta.text = String(betaAngle)
             performSegueWithIdentifier("showCalculationView", sender: self)
             return
         }
@@ -64,6 +60,13 @@ class MeasureViewController: UIViewController {
             return
         }
         
+    }
+    
+    @IBAction func resetPressed(sender: AnyObject) {
+        alphaAngle = nil
+        txtAlpha.text = ""
+        betaAngle = nil
+        txtBeta.text = ""
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
