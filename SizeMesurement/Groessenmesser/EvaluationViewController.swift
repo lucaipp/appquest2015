@@ -33,10 +33,6 @@ class EvaluationViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     func enableGuiElements(enabled: Bool) {
         svAlpha.hidden = !enabled
         svBeta.hidden = !enabled
@@ -62,8 +58,6 @@ class EvaluationViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showCameraView" {
             let vc = segue.destinationViewController as! MeasureViewController
-            vc.alphaAngle = Double(txtAlpha.text!)
-            vc.betaAngle = Double(txtBeta.text!)
             vc.distance = distance
         }
     }
@@ -94,10 +88,6 @@ class EvaluationViewController: UIViewController, UITextFieldDelegate {
         distance = Double(txtDistance.text!)
         if(!svAlpha.hidden && !svBeta.hidden) {
             checkAngles()
-            if(txtDistance.text!.isEmpty) {
-                txtHeight.text = ""
-                btnLog.enabled = false
-            }
             return
         }
         btnTakeMesurement.enabled = !txtDistance.text!.isEmpty
