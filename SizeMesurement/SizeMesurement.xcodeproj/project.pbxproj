@@ -129,6 +129,7 @@
 				TargetAttributes = {
 					1E24187E1BAC2E9C00A727E5 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = HP69ADE7VM;
 					};
 				};
 			};
@@ -308,10 +309,13 @@
 			baseConfigurationReference = 92D612C6B22113A69B15C1F8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Groessenmesser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.SizeMesurement;
 				PRODUCT_NAME = SizeMesurement;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Groessenmesser/BridgingHeader.h;
 			};
 			name = Debug;
@@ -321,10 +325,13 @@
 			baseConfigurationReference = A888A745CA27C51C8AE16560 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Groessenmesser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.SizeMesurement;
 				PRODUCT_NAME = SizeMesurement;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Groessenmesser/BridgingHeader.h;
 			};
 			name = Release;
