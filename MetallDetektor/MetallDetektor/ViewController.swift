@@ -14,6 +14,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        locationManager.headingFilter = kCLHeadingFilterNone
+        locationManager.delegate = self
+        
         lblValue.text = String(0.0)
     }
     
@@ -26,8 +29,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         else {
             isCurrentlyRunning = true
-            locationManager.headingFilter = kCLHeadingFilterNone
-            locationManager.delegate = self
             locationManager.startUpdatingHeading()
             btnTriggerMesurement.setTitle("Messung stoppen", forState: .Normal)
         }

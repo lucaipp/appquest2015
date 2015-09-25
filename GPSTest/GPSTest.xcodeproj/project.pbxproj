@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		812190A41BADA541004EE9BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812190A31BADA541004EE9BF /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		819472051BAD7FC000367B67 /* SolutionLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819472041BAD7FC000367B67 /* SolutionLogger.swift */; settings = {ASSET_TAGS = (); }; };
-		F95BE3C41BAD7D79002C4927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95BE3C31BAD7D79002C4927 /* AppDelegate.swift */; };
-		F95BE3C61BAD7D79002C4927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95BE3C51BAD7D79002C4927 /* ViewController.swift */; };
-		F95BE3C91BAD7D79002C4927 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95BE3C71BAD7D79002C4927 /* Main.storyboard */; };
-		F95BE3CE1BAD7D79002C4927 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95BE3CC1BAD7D79002C4927 /* LaunchScreen.storyboard */; };
+		814C1B101BB0362300A388EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C1B0F1BB0362300A388EC /* AppDelegate.swift */; };
+		814C1B121BB0362300A388EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C1B111BB0362300A388EC /* ViewController.swift */; };
+		814C1B151BB0362300A388EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C1B131BB0362300A388EC /* Main.storyboard */; };
+		814C1B171BB0362300A388EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814C1B161BB0362300A388EC /* Assets.xcassets */; };
+		814C1B1A1BB0362300A388EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C1B181BB0362300A388EC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		812190A31BADA541004EE9BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
-		819472041BAD7FC000367B67 /* SolutionLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionLogger.swift; sourceTree = "<group>"; };
-		F95BE3C01BAD7D79002C4927 /* MetallDetektor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetallDetektor.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F95BE3C31BAD7D79002C4927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F95BE3C51BAD7D79002C4927 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F95BE3C81BAD7D79002C4927 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F95BE3CD1BAD7D79002C4927 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F95BE3CF1BAD7D79002C4927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		814C1B0C1BB0362300A388EC /* GPSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		814C1B0F1BB0362300A388EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		814C1B111BB0362300A388EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		814C1B141BB0362300A388EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		814C1B161BB0362300A388EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		814C1B191BB0362300A388EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		814C1B1B1BB0362300A388EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F95BE3BD1BAD7D79002C4927 /* Frameworks */ = {
+		814C1B091BB0362300A388EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F95BE3B71BAD7D79002C4927 = {
+		814C1B031BB0362300A388EC = {
 			isa = PBXGroup;
 			children = (
-				F95BE3C21BAD7D79002C4927 /* MetallDetektor */,
-				F95BE3C11BAD7D79002C4927 /* Products */,
+				814C1B0E1BB0362300A388EC /* GPSTest */,
+				814C1B0D1BB0362300A388EC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F95BE3C11BAD7D79002C4927 /* Products */ = {
+		814C1B0D1BB0362300A388EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F95BE3C01BAD7D79002C4927 /* MetallDetektor.app */,
+				814C1B0C1BB0362300A388EC /* GPSTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F95BE3C21BAD7D79002C4927 /* MetallDetektor */ = {
+		814C1B0E1BB0362300A388EC /* GPSTest */ = {
 			isa = PBXGroup;
 			children = (
-				F95BE3C31BAD7D79002C4927 /* AppDelegate.swift */,
-				F95BE3C51BAD7D79002C4927 /* ViewController.swift */,
-				F95BE3C71BAD7D79002C4927 /* Main.storyboard */,
-				812190A31BADA541004EE9BF /* Assets.xcassets */,
-				819472041BAD7FC000367B67 /* SolutionLogger.swift */,
-				F95BE3CC1BAD7D79002C4927 /* LaunchScreen.storyboard */,
-				F95BE3CF1BAD7D79002C4927 /* Info.plist */,
+				814C1B0F1BB0362300A388EC /* AppDelegate.swift */,
+				814C1B111BB0362300A388EC /* ViewController.swift */,
+				814C1B131BB0362300A388EC /* Main.storyboard */,
+				814C1B161BB0362300A388EC /* Assets.xcassets */,
+				814C1B181BB0362300A388EC /* LaunchScreen.storyboard */,
+				814C1B1B1BB0362300A388EC /* Info.plist */,
 			);
-			path = MetallDetektor;
+			path = GPSTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F95BE3BF1BAD7D79002C4927 /* MetallDetektor */ = {
+		814C1B0B1BB0362300A388EC /* GPSTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F95BE3D21BAD7D79002C4927 /* Build configuration list for PBXNativeTarget "MetallDetektor" */;
+			buildConfigurationList = 814C1B1E1BB0362300A388EC /* Build configuration list for PBXNativeTarget "GPSTest" */;
 			buildPhases = (
-				F95BE3BC1BAD7D79002C4927 /* Sources */,
-				F95BE3BD1BAD7D79002C4927 /* Frameworks */,
-				F95BE3BE1BAD7D79002C4927 /* Resources */,
+				814C1B081BB0362300A388EC /* Sources */,
+				814C1B091BB0362300A388EC /* Frameworks */,
+				814C1B0A1BB0362300A388EC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MetallDetektor;
-			productName = MetallDetektor;
-			productReference = F95BE3C01BAD7D79002C4927 /* MetallDetektor.app */;
+			name = GPSTest;
+			productName = GPSTest;
+			productReference = 814C1B0C1BB0362300A388EC /* GPSTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F95BE3B81BAD7D79002C4927 /* Project object */ = {
+		814C1B041BB0362300A388EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Team BZT";
 				TargetAttributes = {
-					F95BE3BF1BAD7D79002C4927 = {
+					814C1B0B1BB0362300A388EC = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = HP69ADE7VM;
 					};
 				};
 			};
-			buildConfigurationList = F95BE3BB1BAD7D79002C4927 /* Build configuration list for PBXProject "MetallDetektor" */;
+			buildConfigurationList = 814C1B071BB0362300A388EC /* Build configuration list for PBXProject "GPSTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -110,55 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = F95BE3B71BAD7D79002C4927;
-			productRefGroup = F95BE3C11BAD7D79002C4927 /* Products */;
+			mainGroup = 814C1B031BB0362300A388EC;
+			productRefGroup = 814C1B0D1BB0362300A388EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F95BE3BF1BAD7D79002C4927 /* MetallDetektor */,
+				814C1B0B1BB0362300A388EC /* GPSTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F95BE3BE1BAD7D79002C4927 /* Resources */ = {
+		814C1B0A1BB0362300A388EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F95BE3CE1BAD7D79002C4927 /* LaunchScreen.storyboard in Resources */,
-				812190A41BADA541004EE9BF /* Assets.xcassets in Resources */,
-				F95BE3C91BAD7D79002C4927 /* Main.storyboard in Resources */,
+				814C1B1A1BB0362300A388EC /* LaunchScreen.storyboard in Resources */,
+				814C1B171BB0362300A388EC /* Assets.xcassets in Resources */,
+				814C1B151BB0362300A388EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F95BE3BC1BAD7D79002C4927 /* Sources */ = {
+		814C1B081BB0362300A388EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F95BE3C61BAD7D79002C4927 /* ViewController.swift in Sources */,
-				819472051BAD7FC000367B67 /* SolutionLogger.swift in Sources */,
-				F95BE3C41BAD7D79002C4927 /* AppDelegate.swift in Sources */,
+				814C1B121BB0362300A388EC /* ViewController.swift in Sources */,
+				814C1B101BB0362300A388EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F95BE3C71BAD7D79002C4927 /* Main.storyboard */ = {
+		814C1B131BB0362300A388EC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F95BE3C81BAD7D79002C4927 /* Base */,
+				814C1B141BB0362300A388EC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F95BE3CC1BAD7D79002C4927 /* LaunchScreen.storyboard */ = {
+		814C1B181BB0362300A388EC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F95BE3CD1BAD7D79002C4927 /* Base */,
+				814C1B191BB0362300A388EC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F95BE3D01BAD7D79002C4927 /* Debug */ = {
+		814C1B1C1BB0362300A388EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -210,7 +206,7 @@
 			};
 			name = Debug;
 		};
-		F95BE3D11BAD7D79002C4927 /* Release */ = {
+		814C1B1D1BB0362300A388EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -247,56 +243,49 @@
 			};
 			name = Release;
 		};
-		F95BE3D31BAD7D79002C4927 /* Debug */ = {
+		814C1B1F1BB0362300A388EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = MetallDetektor/Info.plist;
+				INFOPLIST_FILE = GPSTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.MetallDetektor;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.GPSTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
-		F95BE3D41BAD7D79002C4927 /* Release */ = {
+		814C1B201BB0362300A388EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = MetallDetektor/Info.plist;
+				INFOPLIST_FILE = GPSTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.MetallDetektor;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.GPSTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F95BE3BB1BAD7D79002C4927 /* Build configuration list for PBXProject "MetallDetektor" */ = {
+		814C1B071BB0362300A388EC /* Build configuration list for PBXProject "GPSTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F95BE3D01BAD7D79002C4927 /* Debug */,
-				F95BE3D11BAD7D79002C4927 /* Release */,
+				814C1B1C1BB0362300A388EC /* Debug */,
+				814C1B1D1BB0362300A388EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F95BE3D21BAD7D79002C4927 /* Build configuration list for PBXNativeTarget "MetallDetektor" */ = {
+		814C1B1E1BB0362300A388EC /* Build configuration list for PBXNativeTarget "GPSTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F95BE3D31BAD7D79002C4927 /* Debug */,
-				F95BE3D41BAD7D79002C4927 /* Release */,
+				814C1B1F1BB0362300A388EC /* Debug */,
+				814C1B201BB0362300A388EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F95BE3B81BAD7D79002C4927 /* Project object */;
+	rootObject = 814C1B041BB0362300A388EC /* Project object */;
 }

@@ -98,9 +98,6 @@ class SolutionLogger: NSObject {
             self.view.bringSubviewToFront(highlightView)
         }
         
-        override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-        }
         
         func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
             var highlightViewRect = CGRectZero
