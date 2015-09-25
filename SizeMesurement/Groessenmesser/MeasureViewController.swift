@@ -18,6 +18,12 @@ class MeasureViewController: UIViewController {
         super.viewDidLoad()
         cam = BDCamera(previewView: cameraView)
         cam.videoGravity =  AVLayerVideoGravityResizeAspectFill
+        motionManager.deviceMotionUpdateInterval = 0.1
+        motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.currentQueue()!) { (motion, error) in
+            if let attitude = motion?.attitude {
+            self.currentAngle = self.radiansToDegrees(attitude.pitch)
+            }
+        }
         
         // Hier kommt der MotionManager Code rein, mit dem die Winkel
         // gemessen werden können. Den aktuellen Winkel könnt ihr in der 
@@ -25,6 +31,10 @@ class MeasureViewController: UIViewController {
         // Bogenmass und müssen zuerst noch in Grad umgerechnet werden.
         // Eventuell, wollt ihr im GUI noch ein Label auf die Kamera-View
         // setzen, damit ihr darin den aktuell gemessenen Winkel (currentAngle) anzeigen könnt.
+    }
+    
+    private func radiansToDegrees(radians: Double) -> Double {
+        return radians * 180 / M_PI
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -41,14 +51,19 @@ class MeasureViewController: UIViewController {
     
     @IBAction func saveAngle(sender: AnyObject) {
         if(txtAlpha.text!.isEmpty) {
-            txtAlpha.text = "5"
+            txtAlpha.text = String(self.currentAngle)
             return
         }
         if(txtBeta.text!.isEmpty) {
-            txtBeta.text = "15"
+            alphaAngle = currentAngle
             performSegueWithIdentifier("showCalculationView", sender: self)
             return
         }
+        if(!txtAlpha.text!.isEmpty && !txtBeta.text!.isEmpty) {
+            performSegueWithIdentifier("showCalculationView", sender: self)
+            return
+        }
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -46,11 +46,18 @@ class EvaluationViewController: UIViewController, UITextFieldDelegate {
     
     func checkAngles() {
         if(!txtAlpha.text!.isEmpty && !txtBeta.text!.isEmpty && !txtDistance.text!.isEmpty) {
-            let d: Double! = Double(txtDistance.text)
-            let alpha: Double! = Double(txtAlpha.text)
-            let beta: Double! = Double(txtBeta.text)
+            let d: Double! = Double(txtDistance.text!)
+            let alpha: Double! = Double(txtAlpha.text!)
+            let beta: Double! = Double(txtBeta.text!)
             
-            txtHeight.text = String(d * (tan(beta - 90 + alpha) + tan(90 - alpha)))
+            print(d)
+            print(alpha)
+            print(beta)
+            
+            let result: Double! = d * (tan(beta - 90 + alpha) + tan(90 - alpha))
+            print(result)
+            
+            txtHeight.text = String(result)
             
             btnLog.enabled = true
         }
