@@ -284,6 +284,7 @@
 				814C1B201BB0362300A388EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
