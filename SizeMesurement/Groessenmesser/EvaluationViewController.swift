@@ -50,14 +50,7 @@ class EvaluationViewController: UIViewController, UITextFieldDelegate {
             let alpha: Double! = Double(txtAlpha.text!)
             let beta: Double! = Double(txtBeta.text!)
             
-            print(d)
-            print(alpha)
-            print(beta)
-            
-            let result: Double! = d * (tan(beta - 90 + alpha) + tan(90 - alpha))
-            print(result)
-            
-            txtHeight.text = String(result)
+            txtHeight.text = String(d * (tan(degreesToRadians(beta - 90 + alpha)) + tan(degreesToRadians(90 - alpha))))
             
             btnLog.enabled = true
         }
@@ -65,6 +58,10 @@ class EvaluationViewController: UIViewController, UITextFieldDelegate {
             txtHeight.text = ""
             btnLog.enabled = false
         }
+    }
+    
+    private func degreesToRadians(degrees: Double) -> Double {
+        return (M_PI/180) * degrees
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
