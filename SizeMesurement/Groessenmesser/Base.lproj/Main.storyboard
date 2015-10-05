@@ -13,10 +13,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WqS-JF-i6F">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WqS-JF-i6F">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="rbc-qm-4h9">
@@ -157,10 +157,10 @@
                         <viewControllerLayoutGuide type="bottom" id="hMO-e8-saM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FZM-KP-GuS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SizeMesurement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spd-Rb-zdG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SizeMesurement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spd-Rb-zdG">
                                 <rect key="frame" x="189" y="28" width="222" height="36"/>
                                 <animations/>
                                 <constraints>
@@ -177,7 +177,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Csi-Uk-2uc">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Csi-Uk-2uc">
                                 <rect key="frame" x="176" y="72" width="248" height="206"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="XXc-1x-0EO">
@@ -320,7 +320,7 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graphic" translatesAutoresizingMaskIntoConstraints="NO" id="gEf-me-FAu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="graphic" translatesAutoresizingMaskIntoConstraints="NO" id="gEf-me-FAu">
                                 <rect key="frame" x="128" y="298" width="345" height="185"/>
                                 <animations/>
                                 <constraints>
@@ -401,7 +401,7 @@
         <image name="graphic" width="500" height="288"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="n5w-Sc-ztF"/>
+        <segue reference="eS4-qw-Onz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.98431372549999996" green="0.63921568630000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
