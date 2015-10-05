@@ -51,6 +51,9 @@ class MeasureViewController: UIViewController {
     }
     
     @IBAction func saveAngle(sender: AnyObject) {
+        if(currentAngle < 0.0 || currentAngle > 180.0) {
+            
+        }
         if(txtAlpha.text!.isEmpty) {
             alphaAngle = currentAngle
             txtAlpha.text = String(alphaAngle)
