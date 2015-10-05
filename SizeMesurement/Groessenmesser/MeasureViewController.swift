@@ -52,12 +52,6 @@ class MeasureViewController: UIViewController {
     
     @IBAction func saveAngle(sender: AnyObject) {
         if(currentAngle < 0.0 || currentAngle > 180.0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
-=======
-=======
->>>>>>> master
             let alert = UIAlertController(title: "Messfehler!", message:
                 "Der gemessene Winkel ist nicht möglich", preferredStyle: UIAlertControllerStyle.Alert)
             
@@ -67,10 +61,6 @@ class MeasureViewController: UIViewController {
                 handler: {action in
                     self.resetPressed(self)
             }))
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
         }
         if(txtAlpha.text!.isEmpty) {
             alphaAngle = currentAngle
