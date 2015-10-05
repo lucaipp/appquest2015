@@ -21,7 +21,15 @@ class MeasureViewController: UIViewController {
         motionManager.deviceMotionUpdateInterval = 0.1
         motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.currentQueue()!) { (motion, error) in
             if let attitude = motion?.attitude {
-            self.currentAngle = self.radiansToDegrees(attitude.pitch)
+                if(motion?.gravity.z < 0.0) {
+                    self.currentAngle = self.radiansToDegrees(attitude.pitch)
+                }
+                if(motion?.gravity.z == 0.0) {
+                    self.currentAngle = 90.0
+                }
+                if(motion?.gravity.z > 0.0) {
+                    self.currentAngle = 90.0 + (90.0 - self.radiansToDegrees(attitude.pitch))
+                }
             }
         }
     }
@@ -49,8 +57,7 @@ class MeasureViewController: UIViewController {
             return
         }
         if(txtBeta.text!.isEmpty) {
-            print(90.0 + (90.0 - currentAngle))
-            betaAngle = (90.0 + (90.0 - currentAngle) - alphaAngle)
+            betaAngle = currentAngle - alphaAngle
             txtBeta.text = String(betaAngle)
             performSegueWithIdentifier("showCalculationView", sender: self)
             return
