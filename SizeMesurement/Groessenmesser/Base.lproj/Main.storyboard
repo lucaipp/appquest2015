@@ -356,6 +356,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="FpA-Ja-aUj"/>
                                 <exclude reference="wR1-Fu-xE2"/>
                                 <exclude reference="ygv-hJ-Fbz"/>
                                 <exclude reference="FpA-Ja-aUj"/>
