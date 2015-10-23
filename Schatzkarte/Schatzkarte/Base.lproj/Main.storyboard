@@ -8,17 +8,15 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Schatzkarte" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="600" height="492"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem title="Save" id="28o-Zv-jp8"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="H5c-zv-oct"/>
+                        <barButtonItem image="location" id="CmU-ME-iVs">
+                            <connections>
+                                <action selector="locate:" destination="BYZ-38-t0r" id="yB4-g3-aId"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Schatzkarte" id="WbZ-05-Uok"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -56,5 +54,8 @@
             <point key="canvasLocation" x="413" y="625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location" width="32" height="32"/>
+    </resources>
     <color key="tintColor" red="0.98431372549999996" green="0.63921568630000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -10,10 +10,10 @@
 		1E99BFA41BC2A78E009B3B57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E99BFA31BC2A78E009B3B57 /* AppDelegate.swift */; };
 		1E99BFA61BC2A78E009B3B57 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E99BFA51BC2A78E009B3B57 /* MapViewController.swift */; };
 		1E99BFA91BC2A78E009B3B57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E99BFA71BC2A78E009B3B57 /* Main.storyboard */; };
-		1E99BFAB1BC2A78E009B3B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E99BFAA1BC2A78E009B3B57 /* Assets.xcassets */; };
 		1E99BFAE1BC2A78E009B3B57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E99BFAC1BC2A78E009B3B57 /* LaunchScreen.storyboard */; };
 		1EA4095F1BC3CB3600C76093 /* SolutionLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA4095E1BC3CB3600C76093 /* SolutionLogger.swift */; settings = {ASSET_TAGS = (); }; };
 		21CB2F812C11AA2AED4AC8C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB33A9C699933C73BE2EE404 /* libPods.a */; };
+		817D39E31BDA3A0700C02341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817D39E21BDA3A0700C02341 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +22,11 @@
 		1E99BFA31BC2A78E009B3B57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E99BFA51BC2A78E009B3B57 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1E99BFA81BC2A78E009B3B57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1E99BFAA1BC2A78E009B3B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E99BFAD1BC2A78E009B3B57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E99BFAF1BC2A78E009B3B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EA4095E1BC3CB3600C76093 /* SolutionLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionLogger.swift; sourceTree = "<group>"; };
 		1EDC93D31BC2B8700000DD04 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		817D39E21BDA3A0700C02341 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB33A9C699933C73BE2EE404 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD08A6A4490700B269844CD4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +67,7 @@
 				1E99BFA31BC2A78E009B3B57 /* AppDelegate.swift */,
 				1E99BFA51BC2A78E009B3B57 /* MapViewController.swift */,
 				1E99BFA71BC2A78E009B3B57 /* Main.storyboard */,
-				1E99BFAA1BC2A78E009B3B57 /* Assets.xcassets */,
+				817D39E21BDA3A0700C02341 /* Assets.xcassets */,
 				1E99BFAC1BC2A78E009B3B57 /* LaunchScreen.storyboard */,
 				1E99BFAF1BC2A78E009B3B57 /* Info.plist */,
 				1EA4095E1BC3CB3600C76093 /* SolutionLogger.swift */,
@@ -154,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E99BFAE1BC2A78E009B3B57 /* LaunchScreen.storyboard in Resources */,
-				1E99BFAB1BC2A78E009B3B57 /* Assets.xcassets in Resources */,
+				817D39E31BDA3A0700C02341 /* Assets.xcassets in Resources */,
 				1E99BFA91BC2A78E009B3B57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,7 +331,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Schatzkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.hsr.appquest.Schatzkarte;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.Schatzkarte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Schatzkarte/BridgingHeader.h;
 			};
@@ -345,7 +345,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Schatzkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.hsr.appquest.Schatzkarte;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.Schatzkarte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Schatzkarte/BridgingHeader.h;
 			};
