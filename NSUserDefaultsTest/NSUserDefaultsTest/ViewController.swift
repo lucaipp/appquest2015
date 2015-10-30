@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     let defaults = NSUserDefaults.standardUserDefaults()
+    var indexarray = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
 
     @IBAction func Save(sender: AnyObject) {
         
+<<<<<<< Updated upstream
         for var index = 0; index < 10; ++index{
         let latitude = "31.231"
         let longitude = "82.4329"
@@ -38,10 +40,26 @@ class ViewController: UIViewController {
         long.append(longitude)
         codes.append(long)
         print(codes)
+=======
+        let latitude = 31.231
+        let longitude = 82.4325
+        for var indexfor = 0; indexfor < 1; ++indexfor
+        {
+            indexarray = indexarray + 1
+            var codes = [[String]]()
+            var index = [String]()
+            index.append(String(indexarray))
+            var lat = [String]()
+            lat.append(String(latitude))
+            var long = [String]()
+            long.append(String(longitude))
+            codes.append(index)
+            codes.append(lat)
+            codes.append(long)
+            print(codes)
+        }
+>>>>>>> Stashed changes
         
-        let dict = ["Name": location, "Lattiude": latitude, "Longitude": longitude]
-        defaults.setObject(dict, forKey: "SavedDict")
-        print(dict)
         
     }
 
