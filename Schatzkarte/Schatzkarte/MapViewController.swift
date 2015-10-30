@@ -9,13 +9,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, RMMapViewD
     let kHsrCoordinate = CLLocationCoordinate2DMake(47.223252, 8.817011)
     var kMapView: RMMapView!
     let kLocationManager = CLLocationManager()
-    var kCurrentLocationMarker: RMPointAnnotation = RMPointAnnotation()
+    var kCurrentLocationMarker = RMPointAnnotation()
     var kMarkerArray: [RMPointAnnotation] = []
     let kDefaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //MapView-Konfiguration
         RMConfiguration.sharedInstance().accessToken = kAccessToken
         kMapView = RMMapView(frame: self.view.bounds, andTilesource: RMMapboxSource(mapID: kMapID)!)
         kMapView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
@@ -24,7 +24,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, RMMapViewD
         
         self.view.addSubview(kMapView)
         
+        //LocationManager-Konfiguration
+        kLocationManager.desiredAccuracy = kCLLocationAccuracyBest
         kLocationManager.delegate = self
+        
         if CLLocationManager.locationServicesEnabled() {
             kLocationManager.startUpdatingLocation()
         }
@@ -45,13 +48,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, RMMapViewD
         kMarkerArray = []
         
         if kDefaults.objectForKey("markerArray") != nil {
-            let markerArray: NSArray = kDefaults.objectForKey("markerArray") as! NSArray
-            if markerArray.count > 0 {
-                for(var i: Int = 0; i < markerArray.count; i++) {
-                    var pointArray: NSArray = NSArray()
-                    pointArray = markerArray[i] as! NSArray
-                    kMarkerArray.append(RMPointAnnotation(mapView: kMapView, coordinate: CLLocationCoordinate2D(latitude: Double(pointArray[0] as! NSNumber), longitude:        Double(pointArray[1] as! NSNumber)), andTitle: String(i)))
-                }
+            let markerArray = kDefaults.objectForKey("markerArray") as! NSArray
+            for(var i: Int = 0; i < markerArray.count; i++) {
+                var pointArray = NSArray()
+                pointArray = markerArray[i] as! NSArray
+                kMarkerArray.append(RMPointAnnotation(mapView: kMapView, coordinate: CLLocationCoordinate2D(latitude: Double(pointArray[0] as! NSNumber), longitude: Double(pointArray[1] as! NSNumber)), andTitle: String(i)))
             }
         }
         if kMarkerArray.count > 0 {
@@ -94,7 +95,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, RMMapViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell()
+        let cell = UITableViewCell()
         cell.textLabel?.text = kMarkerArray[indexPath.row].title
         
         return cell
@@ -105,13 +106,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, RMMapViewD
         let deleteAlert = UIAlertController()
         deleteAlert.title = "Delete Selected Marker?"
         deleteAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) in
-            for(var i: Int = 0; i < self.kMarkerArray.count; i++) {
-                if self.kMarkerArray[i].title == tableView.cellForRowAtIndexPath(indexPath)!.textLabel?.text {
-                    self.kMapView.removeAnnotation(self.kMarkerArray[i])
-                    self.kMarkerArray.removeAtIndex(i)
-                    tableView.reloadData()
-                    self.saveMarkerArray()
-                }
+            let title = tableView.cellForRowAtIndexPath(indexPath)!.textLabel?.text
+            if let index = self.kMarkerArray.indexOf({ $0.title == title }) {
+                self.kMapView.removeAnnotation(self.kMarkerArray[index])
+                self.kMarkerArray.removeAtIndex(index)
+                tableView.reloadData()
+                self.saveMarkerArray()
             }
         }))
         deleteAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
@@ -122,9 +122,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, RMMapViewD
     
     func saveMarkerArray() {
         if kMarkerArray.count > 0 {
-            let markerArray: NSMutableArray = NSMutableArray()
+            let markerArray = NSMutableArray()
             for(var i: Int = 0; i < kMarkerArray.count; i++) {
-                let pointArray: NSMutableArray = NSMutableArray()
+                let pointArray = NSMutableArray()
                 pointArray.addObject(Double(kMarkerArray[i].coordinate.latitude))
                 pointArray.addObject(Double(kMarkerArray[i].coordinate.longitude))
                 markerArray.addObject(pointArray)
@@ -139,13 +139,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, RMMapViewD
     
     //Actions bei Klick auf ToolBar-Buttons
     @IBAction func saveCurrentPosition(sender: AnyObject) {
-        let newMarker = RMPointAnnotation()
-        newMarker.mapView = kMapView
-        newMarker.title = String(kMarkerArray.count + 1)
-        newMarker.coordinate = kCurrentLocationMarker.coordinate
-        
+        let newMarker = RMPointAnnotation(mapView: kMapView, coordinate: kCurrentLocationMarker.coordinate, andTitle: String(kMarkerArray.count))
         kMarkerArray.append(newMarker)
         kMapView.addAnnotation(newMarker)
+        saveMarkerArray()
     }
     
     @IBAction func locate(sender: AnyObject) {
@@ -154,7 +151,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, RMMapViewD
     }
     
     @IBAction func showMarkers(sender: AnyObject) {
-        let tableViewController: UITableViewController = UITableViewController()
+        let tableViewController = UITableViewController()
         
         tableViewController.tableView.dataSource = self
         tableViewController.tableView.delegate = self
