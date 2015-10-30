@@ -1,7 +1,7 @@
 import UIKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, RMMapViewDelegate {
     
     
     let kAccessToken = "sk.eyJ1IjoidG9uaXN1dGVyIiwiYSI6ImNpZmptbnhxYTAxMGR0ZWx4ZjFhejdkMzEifQ.4HxuC8B4MW_slik23J9NqQ"
@@ -16,10 +16,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         RMConfiguration.sharedInstance().accessToken = kAccessToken
         kMapView = RMMapView(frame: self.view.bounds, andTilesource: RMMapboxSource(mapID: kMapID)!)
+        kMapView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        kMapView.delegate = self
+        
         self.view.addSubview(kMapView)
         
         kCurrentLocationMarker = RMPointAnnotation()
         kCurrentLocationMarker.mapView = kMapView
+        kCurrentLocationMarker.title = "My Location"
+        
         kMapView.addAnnotation(kCurrentLocationMarker)
         
         kLocationManager.delegate = self
@@ -65,5 +70,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func locate(sender: AnyObject) {
         kMapView.centerCoordinate = kCurrentLocationMarker.coordinate
+        kMapView.zoom = 16
     }
+    
+    func mapView(mapView: RMMapView!, annotation: RMAnnotation!, didChangeDragState newState: RMMapLayerDragState, fromOldState oldState: RMMapLayerDragState) {
+<#code#>
+}
 }
