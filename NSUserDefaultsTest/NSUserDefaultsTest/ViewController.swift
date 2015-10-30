@@ -24,14 +24,19 @@ class ViewController: UIViewController {
 
     @IBAction func Save(sender: AnyObject) {
         
-        let location = "Taegerwilen"
-        let latitude = 31.231
-        let longitude = 82.4325
-        let codes = [[Double]]()
-        var lat = [Double]()
+        for var index = 0; index < 10; ++index{
+        let latitude = "31.231"
+        let longitude = "82.4329"
+        var codes = [[String]]()
+        var loc = [String]()
+        loc.append(index)
+        codes.append(loc)
+        var lat = [String]()
         lat.append(latitude)
-        var long = [Double]()
+        codes.append(lat)
+        var long = [String]()
         long.append(longitude)
+        codes.append(long)
         print(codes)
         
         let dict = ["Name": location, "Lattiude": latitude, "Longitude": longitude]
