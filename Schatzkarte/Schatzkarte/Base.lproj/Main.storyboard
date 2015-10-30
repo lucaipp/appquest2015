@@ -9,7 +9,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Schatzkarte" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems>
-                        <barButtonItem title="Save" id="28o-Zv-jp8"/>
+                        <barButtonItem title="Save" id="28o-Zv-jp8">
+                            <connections>
+                                <action selector="saveCurrentPosition:" destination="BYZ-38-t0r" id="nHK-Vh-JhV"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="H5c-zv-oct"/>
                         <barButtonItem image="location" id="CmU-ME-iVs">
                             <connections>
@@ -17,7 +21,18 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Schatzkarte" id="WbZ-05-Uok"/>
+                    <navigationItem key="navigationItem" title="Schatzkarte" id="WbZ-05-Uok">
+                        <barButtonItem key="leftBarButtonItem" title="Log Solution" id="ygl-rw-nFr">
+                            <connections>
+                                <action selector="logSolution:" destination="BYZ-38-t0r" id="4kY-U5-JfZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Show Markers" id="Te2-TR-PuI">
+                            <connections>
+                                <action selector="showMarkers:" destination="BYZ-38-t0r" id="bua-WX-hRw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
