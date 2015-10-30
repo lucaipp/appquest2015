@@ -11,9 +11,9 @@
 		1E99BFA61BC2A78E009B3B57 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E99BFA51BC2A78E009B3B57 /* MapViewController.swift */; };
 		1E99BFA91BC2A78E009B3B57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E99BFA71BC2A78E009B3B57 /* Main.storyboard */; };
 		1E99BFAE1BC2A78E009B3B57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E99BFAC1BC2A78E009B3B57 /* LaunchScreen.storyboard */; };
-		1EA4095F1BC3CB3600C76093 /* SolutionLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA4095E1BC3CB3600C76093 /* SolutionLogger.swift */; settings = {ASSET_TAGS = (); }; };
+		1EA4095F1BC3CB3600C76093 /* SolutionLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA4095E1BC3CB3600C76093 /* SolutionLogger.swift */; };
 		21CB2F812C11AA2AED4AC8C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB33A9C699933C73BE2EE404 /* libPods.a */; };
-		817D39E31BDA3A0700C02341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817D39E21BDA3A0700C02341 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		817D39E31BDA3A0700C02341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 817D39E21BDA3A0700C02341 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +127,12 @@
 				TargetAttributes = {
 					1E99BF9F1BC2A78E009B3B57 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = V8XY8FDZ5L;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -328,10 +334,11 @@
 			baseConfigurationReference = FD08A6A4490700B269844CD4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Schatzkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.Schatzkarte;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.j.appquest.Schatzkarte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Schatzkarte/BridgingHeader.h;
 			};
@@ -342,10 +349,11 @@
 			baseConfigurationReference = 1401B838BF06A084AD5CEBEF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Schatzkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.Schatzkarte;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.j.appquest.Schatzkarte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = Schatzkarte/BridgingHeader.h;
 			};
