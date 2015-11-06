@@ -24,6 +24,10 @@ class ViewController: UIViewController {
     
 
     @IBAction func Save(sender: AnyObject) {
+<<<<<<< Updated upstream
+=======
+        
+>>>>>>> Stashed changes
 
         let latitude = 31.231
         let longitude = 82.4325
@@ -42,6 +46,10 @@ class ViewController: UIViewController {
             codes.append(long)
             print(codes)
         }
+<<<<<<< Updated upstream
+=======
+        
+>>>>>>> Stashed changes
         
     }
 
