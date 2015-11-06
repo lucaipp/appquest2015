@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "viewTapped:"))
         self.solutionLogger = SolutionLogger(viewController: self)
+        
     }
     
     func viewTapped(sender:UITapGestureRecognizer) {
@@ -36,7 +37,7 @@ class MainViewController: UIViewController {
             }
             
             if let endStation = dict["endStation"] as? Int, let startStation = self.startStation {
-                //TODO: Logge die Lösung im Logbuch mit Hilfe des SolutionLoggers
+                solutionLogger.logSolution("{\"startStation\":\(startStation),\"endStation\":\(endStation),\"task\":\"Schrittzaehler\"}")
             }
         } catch _ {
             print("Error can't decode JSON")
@@ -62,12 +63,22 @@ class MainViewController: UIViewController {
         stepCounter.onAccelerationMeasured = { (x,y,z,power) in
             self.graphView.addX(0, y: 0, z: power)
         }
-        
         nextStep()
     }
     
     func nextStep() {
-        // TODO: Nehme die nächste Action aus dem actions-Array und gebe sie mit Hilfe des SpeechSynthesizers aus
+        if actions.count > 0 {
+            let currentAction = actions[0]
+            actions = Array(actions.dropFirst())
+            if Int(currentAction) != nil {
+                speechSynthesizer.speak("Laufe \(currentAction) Schritte")
+                startStepCounterWithSteptarget(Int(currentAction)!)
+            }
+            else {
+                speechSynthesizer.speak("Drehe dich nach \(currentAction)")
+                nextStep()
+            }
+        }
     }
 }
 
