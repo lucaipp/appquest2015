@@ -95,7 +95,7 @@
 				TargetAttributes = {
 					F95CE6F51BDA164C00E19E4D = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = V8XY8FDZ5L;
+						DevelopmentTeam = HP69ADE7VM;
 					};
 				};
 			};
@@ -251,7 +251,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NSUserDefaultsTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.hsr.appquest.NSUserDefaultsTest;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.NSUserDefaultsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -265,7 +265,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NSUserDefaultsTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.hsr.appquest.NSUserDefaultsTest;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.NSUserDefaultsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -290,6 +290,7 @@
 				F95CE70A1BDA164C00E19E4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

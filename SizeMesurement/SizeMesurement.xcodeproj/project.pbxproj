@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		714063B9020067672AA0E965 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05135EC0A08430B9F4CF1AD8 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
-		8130E2561BB0991E007D6C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130E24E1BB0991E007D6C60 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		8130E2571BB0991E007D6C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8130E24F1BB0991E007D6C60 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		8130E2591BB0991E007D6C60 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130E2521BB0991E007D6C60 /* EvaluationViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		8130E25B1BB0991E007D6C60 /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130E2541BB0991E007D6C60 /* MeasureViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		8130E25C1BB0991E007D6C60 /* SolutionLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130E2551BB0991E007D6C60 /* SolutionLogger.swift */; settings = {ASSET_TAGS = (); }; };
-		8130E25F1BB09925007D6C60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8130E25D1BB09925007D6C60 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		8130E2651BB0AA1E007D6C60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8130E2631BB0AA1D007D6C60 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		8130E2561BB0991E007D6C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130E24E1BB0991E007D6C60 /* AppDelegate.swift */; };
+		8130E2571BB0991E007D6C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8130E24F1BB0991E007D6C60 /* Assets.xcassets */; };
+		8130E2591BB0991E007D6C60 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130E2521BB0991E007D6C60 /* EvaluationViewController.swift */; };
+		8130E25B1BB0991E007D6C60 /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130E2541BB0991E007D6C60 /* MeasureViewController.swift */; };
+		8130E25C1BB0991E007D6C60 /* SolutionLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130E2551BB0991E007D6C60 /* SolutionLogger.swift */; };
+		8130E25F1BB09925007D6C60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8130E25D1BB09925007D6C60 /* LaunchScreen.storyboard */; };
+		8130E2651BB0AA1E007D6C60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8130E2631BB0AA1D007D6C60 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,7 +129,7 @@
 				TargetAttributes = {
 					1E24187E1BAC2E9C00A727E5 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = HP69ADE7VM;
+						DevelopmentTeam = V8XY8FDZ5L;
 					};
 				};
 			};
@@ -313,7 +313,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Groessenmesser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.SizeMesurement;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.j.appquest.SizeMesurement;
 				PRODUCT_NAME = SizeMesurement;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Groessenmesser/BridgingHeader.h;
@@ -329,7 +329,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Groessenmesser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.appquest.SizeMesurement;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.j.appquest.SizeMesurement;
 				PRODUCT_NAME = SizeMesurement;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Groessenmesser/BridgingHeader.h;
