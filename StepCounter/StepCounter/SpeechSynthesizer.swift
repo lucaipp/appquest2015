@@ -2,14 +2,20 @@ import UIKit
 import AVFoundation
 
 class SpeechSynthesizer: NSObject {
+    let synthesizer = AVSpeechSynthesizer()
     let languageCode = "de-DE"
     
     override init() {
         super.init()
-        // TODO: AVSpeechSynthesizer aufsetzen
     }
     
     func speak(text:String, onComplete:()->()) {
-        // TODO: gebe den Text aus und rufe den onComplete-Callback auf
+        speak(text)
+    }
+    
+    func speak(text:String) {
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: languageCode)
+        synthesizer.speakUtterance(utterance)
     }
 }
