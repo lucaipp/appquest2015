@@ -26,20 +26,35 @@
                                     <constraint firstAttribute="height" constant="112" id="wgb-mV-Ktp"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to begin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="a31-4J-rfu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berühren um zu starten" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="a31-4J-rfu">
                                 <rect key="frame" x="20" y="155" width="560" height="27"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQY-hF-CIu">
                                 <rect key="frame" x="20" y="254" width="560" height="29"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GY-Sf-uGL">
+                                <rect key="frame" x="299" y="334" width="1" height="37"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suD-wl-BYb">
+                                <rect key="frame" x="284" y="374" width="32" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopProcess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Grc-K9-ovl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -49,16 +64,22 @@
                             <constraint firstAttribute="trailing" secondItem="y5s-32-GVh" secondAttribute="trailing" id="9vL-TE-ORr"/>
                             <constraint firstItem="y5s-32-GVh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OMZ-bl-E1j"/>
                             <constraint firstItem="wQY-hF-CIu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ri8-oY-gFU"/>
+                            <constraint firstItem="y5s-32-GVh" firstAttribute="top" secondItem="suD-wl-BYb" secondAttribute="bottom" constant="20" id="USM-E7-kFE"/>
                             <constraint firstItem="wQY-hF-CIu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WMu-oO-WXa"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y5s-32-GVh" secondAttribute="bottom" id="Wvb-6i-fSu"/>
+                            <constraint firstItem="suD-wl-BYb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YZa-bX-64d"/>
                             <constraint firstItem="a31-4J-rfu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="c4p-D8-coD"/>
                             <constraint firstItem="a31-4J-rfu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dvK-cT-azl"/>
+                            <constraint firstItem="1GY-Sf-uGL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fam-u0-kL3"/>
+                            <constraint firstItem="suD-wl-BYb" firstAttribute="top" secondItem="1GY-Sf-uGL" secondAttribute="bottom" constant="8" id="zLn-1Z-yh6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="StepCounter" id="eL8-d2-4Y0"/>
                     <connections>
+                        <outlet property="btnStop" destination="suD-wl-BYb" id="ezX-be-xbx"/>
                         <outlet property="graphView" destination="y5s-32-GVh" id="9Sc-kl-s2D"/>
                         <outlet property="instructionLabel" destination="a31-4J-rfu" id="xkD-F9-yg9"/>
+                        <outlet property="lblCurrentTarget" destination="1GY-Sf-uGL" id="0pG-xR-e9J"/>
                         <outlet property="stepsLabel" destination="wQY-hF-CIu" id="8i9-DW-Tks"/>
                     </connections>
                 </viewController>

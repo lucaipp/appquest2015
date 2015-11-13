@@ -4,24 +4,39 @@ class MainViewController: UIViewController {
     @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var graphView: GraphView!
+    @IBOutlet weak var lblCurrentTarget: UILabel!
+    @IBOutlet weak var btnStop: UIButton!
     
     let speechSynthesizer = SpeechSynthesizer()
     var solutionLogger: SolutionLogger!
     var stepCounter: AccelerometerStepCounter!
     var actions: Array<String> = []
     var startStation: Int?
+    var isCurrentlyRunning = false
+    var processPaused = false
 
     override func viewDidLoad() {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "viewTapped:"))
         self.solutionLogger = SolutionLogger(viewController: self)
-        
+        lblCurrentTarget.text = "QR-Code einlesen"
+        btnStop.enabled = isCurrentlyRunning
     }
     
     func viewTapped(sender:UITapGestureRecognizer) {
-        stepCounter?.stop()
-        actions = []
-        solutionLogger.scanQRCode { code in
-            self.handleQRCode(code)
+        if !isCurrentlyRunning {
+            stepCounter?.stop()
+            actions = []
+            solutionLogger.scanQRCode { code in
+                self.handleQRCode(code)
+            }
+            return
+        }
+        
+        if processPaused {
+            instructionLabel.hidden = true
+            processPaused = false
+            nextStep()
+            return
         }
     }
     
@@ -33,6 +48,7 @@ class MainViewController: UIViewController {
             if let input = dict["input"] as? Array<String> {
                 self.actions = input
                 self.startStation = dict["startStation"] as? Int
+                self.instructionLabel.hidden = true
                 self.start()
             }
             
@@ -58,6 +74,7 @@ class MainViewController: UIViewController {
     }
     
     func start() {
+        toggleWalkingProcess()
         stepsLabel.text = "0"
         stepCounter = AccelerometerStepCounter()
         stepCounter.onAccelerationMeasured = { (x,y,z,power) in
@@ -71,14 +88,38 @@ class MainViewController: UIViewController {
             let currentAction = actions[0]
             actions = Array(actions.dropFirst())
             if Int(currentAction) != nil {
-                speechSynthesizer.speak("Laufe \(currentAction) Schritte")
+                speakAction(String("Laufe \(currentAction) Schritte"))
                 startStepCounterWithSteptarget(Int(currentAction)!)
             }
             else {
-                speechSynthesizer.speak("Drehe dich nach \(currentAction)")
-                nextStep()
+                speakAction(String("Drehe dich nach \(currentAction)"))
+                instructionLabel.hidden = false
+                instructionLabel.text = "Berühren um fortzufahren"
+                processPaused = true
             }
         }
+        else {
+            stopProcess(self)
+        }
+    }
+    
+    func speakAction (action: String) {
+        lblCurrentTarget.text = action
+        speechSynthesizer.speak(lblCurrentTarget.text!)
+    }
+    
+    func toggleWalkingProcess () {
+        isCurrentlyRunning = !isCurrentlyRunning
+        btnStop.enabled = !btnStop.enabled
+    }
+    
+    @IBAction func stopProcess(sender: AnyObject) {
+        stepCounter?.stop()
+        actions = []
+        toggleWalkingProcess()
+        stepsLabel.text = String("")
+        instructionLabel.hidden = false
+        speakAction("QR-Code einlesen")
     }
 }
 
