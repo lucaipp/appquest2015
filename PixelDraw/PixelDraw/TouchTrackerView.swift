@@ -3,7 +3,7 @@ import UIKit
 class TouchTrackerView: UIView {
     let touchPath: UIBezierPath = {
         let path = UIBezierPath()
-        path.lineWidth = 4.0
+        path.lineWidth = 0.0
         return path
     }()
     var points = [CGPoint]()
@@ -11,6 +11,7 @@ class TouchTrackerView: UIView {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
+            onPathDrawn(self.points)
             let touchPoint = touch.locationInView(self)
             points.append(touchPoint)
             touchPath.moveToPoint(touchPoint)
@@ -19,6 +20,7 @@ class TouchTrackerView: UIView {
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
+            onPathDrawn(self.points)
             let touchPoint = touch.locationInView(self)
             points.append(touchPoint)
             touchPath.addLineToPoint(touchPoint)
