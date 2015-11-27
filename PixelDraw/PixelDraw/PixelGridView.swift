@@ -3,7 +3,7 @@ import UIKit
 class PixelGridView: UIView {
     let gridSize: Int
     let gridColor: UIColor
-    var squares = [UIView]()
+    var squares = [[UIView]]()
 
     init(gridSize: Int, gridColor: UIColor) {
         self.gridSize = gridSize
@@ -21,32 +21,47 @@ class PixelGridView: UIView {
         let smallerSide = min(screenSize.width, screenSize.height)
         let squareSize = Int(smallerSide) / gridSize
         
-        // TODO: set up square-views and position them one after another to form a grid
+        // TODO: set up square-views and position them one after another to form a grid --> DONE
+        for var y = 0; y < gridSize; y++ {
+            var lineSquares = [UIView]()
+            for var x = 0; x < gridSize; x++ {
+                let square = UIView(frame: CGRect(x: ((Int(screenSize.width) - (gridSize * squareSize)) / 2) + (x * squareSize), y: (y * squareSize), width: squareSize, height: squareSize))
+                square.layer.borderWidth = 1.0
+                square.layer.borderColor = gridColor.CGColor
+                square.backgroundColor = UIColor(rgba: "#FFFFFFFF")
+                addSubview(square)
+                lineSquares.append(square)
+            }
+            squares.append(lineSquares)
+        }
     }
     
     func colorizeSquaresOnPath(path: [CGPoint], color: UIColor) {
-        var previousPoint:CGPoint?
         for currentPoint in path {
-            if let lineStart = previousPoint {
-                colorizeSquares(color) { square in
-                    return false // TODO: return whether the square's frame has been intersected by the drawn path segment. Use the LineIntersection class.
-                }
-            } else {
-                /* For the first point we only check if the point is contained in a view's coordinates rect */
-                colorizeSquares(color) { square in
-                    return CGRectContainsPoint(square.frame, currentPoint)
-                }
+            colorizeSquares(color) { square in
+                return CGRectContainsPoint(square.frame, currentPoint)
             }
-            previousPoint = currentPoint
         }
     }
     
     private func colorizeSquares(color: UIColor, condition:(UIView) -> (Bool) ){
-        // TODO: set the background color for all squares for which condition(square) == true
+        // TODO: set the background color for all squares for which condition(square) == true -> DONE
+        for var x = 0; x < squares.count; x++ {
+            for var y = 0; y < squares[x].count; y++ {
+                if condition(squares[x][y]) == true {
+                    squares[x][y].backgroundColor = color
+                }
+            }
+        }
     }
 
     func clearSquares() {
-        // TODO: clear the background color of all squares
+        // TODO: clear the background color of all squares -> DONE
+        for var x = 0; x < squares.count; x++ {
+            for var y = 0; y < squares[x].count; y++ {
+                squares[x][y].backgroundColor = UIColor(rgba: "#FFFFFFFF")
+            }
+        }
     }
 }
 
