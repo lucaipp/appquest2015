@@ -53,7 +53,12 @@ class MainViewController: UIViewController {
             }
             
             if let endStation = dict["endStation"] as? Int, let startStation = self.startStation {
-                solutionLogger.logSolution("{\"startStation\":\(startStation),\"endStation\":\(endStation),\"task\":\"Schrittzaehler\"}")
+                let jsonDict = ["task": "Schrittzaehler",
+                    "startStation":startStation,
+                    "endStation":endStation]
+                let json = solutionLogger.JSONStringify(jsonDict)
+                solutionLogger.logSolution(json)
+//                solutionLogger.logSolution("{\"startStation\":\(startStation),\"endStation\":\(endStation),\"task\":\"Schrittzaehler\"}")
             }
         } catch _ {
             print("Error can't decode JSON")
